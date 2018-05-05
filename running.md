@@ -1,6 +1,7 @@
 These are the commands to help you during the workshop.
 
 # OS Creds
+If you are using the provided VM these are the creds to use:
 * User: `tuskcon`
 * Password: `tuskcon`
 
@@ -18,7 +19,7 @@ dump1090 is a tool for the RTLSDR which will take ADS-B signals
 1. Browse to http://localhost:8080/
 
 # ADSB-Out
-[ADSB-Out](https://github.com/nzkarit/ADSB-Out) is a tool for broadcasting ADS-B singals. **DO NOT** broadcast on avaition frequency. Broadcast on an ISM band such as 915MHz. When using `hackrf_transfer` use the `-f 915000000` to broadcast on 915MHz.
+[ADSB-Out](https://github.com/nzkarit/ADSB-Out) is a tool for broadcasting ADS-B signals. **DO NOT** broadcast on the aviation frequency. Broadcast on an ISM band such as 915MHz. When using `hackrf_transfer` use the `-f 915000000` flag to broadcast on 915MHz.
 
 ## Broadcast Single plane
 1. `cd ADSB-Out`
@@ -34,6 +35,7 @@ The `-r` for ADSB_Encoder.py when generating the samples, will repeat X times. I
 ## ADSB-Out help
 ADSB_Encoder.py has built in help which can be access by running:
 * `./ADSB_Encoder.py --help`
+The help is as follows:
 ```
 $ ./ADSB_Encoder.py --help
 usage: ADSB_Encoder.py [-h] [-i ICAO] [--lat LATITUDE] [--lon LONGITUDE]
@@ -91,3 +93,11 @@ optional arguments:
   --csv CSVFILE, --csvfile CSVFILE, --in CSVFILE, --input CSVFILE
                         Import a CSV file with the plane data in it. Default:
 ```
+# CSV Generator
+
+## generateAllICAO.py
+1. `cd ADSB-Out`
+1. In generateAllICAO.py set minICAO and maxICAO for how many planes you wish generate. This is in hex by default.
+1. `./generateAllICAO.py`
+1. `python3 allICAO.py`
+1. `sudo bash hackRFAllICAO.sh`
