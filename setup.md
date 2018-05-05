@@ -35,10 +35,10 @@ These are some instruction I put together to get the VM up and running. I have b
 ## Test dump1090
 1. `./dump1090 --net`
 1. Browse to http://localhost:8080/
+1. If there are planes overhead with ADS-B you should see them plotted on the map
 
 # Setup ADSB Out
 1. `git clone https://github.com/nzkarit/ADSB-Out.git`
-
 
 ## Test ADSB Out
 1. `cd dump1090`
