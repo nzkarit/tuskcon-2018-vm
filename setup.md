@@ -1,4 +1,4 @@
-These are some instruction I put together to get the VM up and running. I have been workingon on Ubuntu 18.04 Desktop.
+These are some instruction I put together to get the VM up and running. I have been working on on Ubuntu 18.04 Desktop.
 
 # PreReq
 1. `sudo apt install git cmake libusb-dev libusb-1.0-0-dev open-vm-tools build-essential librtlsdr-dev pkg-config python3-numpy`
