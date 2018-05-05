@@ -32,6 +32,11 @@ The `-r` for ADSB_Encoder.py when generating the samples, will repeat X times. I
 1. `./ADSB_Encoder.py -r 10`
 1. `sudo hackrf_transfer -t Samples_256K.iq8s -f 915000000 -s 2000000 -x 10`
 
+## Broadcast from a CSV
+1. `cd ADSB-Out`
+1. `./ADSB_Encoder.py --csv example.csv`
+1. `sudo hackrf_transfer -t Samples_256K.iq8s -f 915000000 -s 2000000 -x 10`
+
 ## ADSB-Out help
 ADSB_Encoder.py has built in help which can be access by running:
 * `./ADSB_Encoder.py --help`
@@ -93,7 +98,13 @@ optional arguments:
   --csv CSVFILE, --csvfile CSVFILE, --in CSVFILE, --input CSVFILE
                         Import a CSV file with the plane data in it. Default:
 ```
+# Making a CSV
+The CSV parsing is dynamic and so long as there are column names which match the names in the [config.cfg](https://github.com/nzkarit/ADSB-Out/blob/master/config.cfg) the application should be able to make it work.
+
+There is an example above which demonstrates how to run using a CSV file.
+
 # CSV Generator
+These are some details on the CSV generator scripts that will generate CSV files which will target one aspect of the ADS-B message which you are wanting to stress.
 
 ## generateAllICAO.py
 1. `cd ADSB-Out`
@@ -101,3 +112,10 @@ optional arguments:
 1. `./generateAllICAO.py`
 1. `python3 allICAO.py`
 1. `sudo bash hackRFAllICAO.sh`
+
+## generateAllLat.py
+1. `cd ADSB-Out`
+1. In generateAllLat.py set minLat and maxLat for how many latitudes you wish generate, step is what the step size in teh latitude is going to be. This will fail when the number of latitudes is less than split size, so max sure there are more planes than the split size or drop the split size.
+1. `./generateAllLat.py`
+1. `python3 allLat.py`
+1. `sudo bash hackRFAllLat.sh`
