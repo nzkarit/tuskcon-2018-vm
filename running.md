@@ -97,7 +97,7 @@ optional arguments:
 
 ## generateAllICAO.py
 1. `cd ADSB-Out`
-1. In generateAllICAO.py set minICAO and maxICAO for how many planes you wish generate. This is in hex by default.
+1. In generateAllICAO.py set minICAO and maxICAO for how many planes you wish generate. This is in hex by default. This will fail when the number of planes is less than split size, so max sure there are more planes than the split size or drop the split size.
 1. `./generateAllICAO.py`
 1. `python3 allICAO.py`
 1. `sudo bash hackRFAllICAO.sh`
