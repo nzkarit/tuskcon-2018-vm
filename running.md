@@ -5,8 +5,15 @@ If you are using the provided VM these are the creds to use:
 * User: `tuskcon`
 * Password: `tuskcon`
 
+# Before we start
+Ensure that have a copy of the latest code and Git Pull everything
+1. `cd ADSB-Out`
+1. `git pull`
+1. `cd ../tuskcon-2018-vm`
+1. `git pull`
+
 # dump1090
-dump1090 is a tool for the RTLSDR which will take ADS-B signals
+dump1090 is a tool for the RTLSDR which will take ADS-B signals. You will need a RTLSDR to run this tool.
 
 ## Run dump1090 actual planes
 1. `cd dump1090`
@@ -19,7 +26,7 @@ dump1090 is a tool for the RTLSDR which will take ADS-B signals
 1. Browse to http://localhost:8080/
 
 # ADSB-Out
-[ADSB-Out](https://github.com/nzkarit/ADSB-Out) is a tool for broadcasting ADS-B signals. **DO NOT** broadcast on the aviation frequency. Broadcast on an ISM band such as 915MHz. When using `hackrf_transfer` use the `-f 915000000` flag to broadcast on 915MHz.
+[ADSB-Out](https://github.com/nzkarit/ADSB-Out) is a tool for broadcasting ADS-B signals. **DO NOT** broadcast on the aviation frequency. Broadcast on an ISM band such as 915MHz. When using `hackrf_transfer` use the `-f 915000000` flag to broadcast on 915MHz. You will need a HackRF to run this tool.
 
 ## Broadcast Single plane
 1. `cd ADSB-Out`
@@ -99,7 +106,7 @@ optional arguments:
                         Import a CSV file with the plane data in it. Default:
 ```
 # Making a CSV
-The CSV parsing is dynamic and so long as there are column names which match the names in the [config.cfg](https://github.com/nzkarit/ADSB-Out/blob/master/config.cfg) the application should be able to make it work.
+The CSV parsing is dynamic and so long as there are column names which match the names in the [config.cfg](https://github.com/nzkarit/ADSB-Out/blob/master/config.cfg) the application should be able to make it work. There needs to be column names in row 1 and it is expecting that the delimiter is a comma.
 
 There is an example above which demonstrates how to run using a CSV file.
 
@@ -115,7 +122,7 @@ These are some details on the CSV generator scripts that will generate CSV files
 
 ## generateAllLat.py
 1. `cd ADSB-Out`
-1. In generateAllLat.py set minLat and maxLat for how many latitudes you wish generate, step is what the step size in teh latitude is going to be. This will fail when the number of latitudes is less than split size, so max sure there are more planes than the split size or drop the split size.
+1. In generateAllLat.py set minLat and maxLat for how many latitudes you wish generate, step is what the step size in the latitude is going to be. This will fail when the number of latitudes is less than split size, so max sure there are more planes than the split size or drop the split size.
 1. `./generateAllLat.py`
 1. `python3 allLat.py`
 1. `sudo bash hackRFAllLat.sh`
