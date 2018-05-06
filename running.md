@@ -115,14 +115,14 @@ These are some details on the CSV generator scripts that will generate CSV files
 
 ## generateAllICAO.py
 1. `cd ADSB-Out`
-1. In generateAllICAO.py set minICAO and maxICAO for how many planes you wish generate. This is in hex by default. This will fail when the number of planes is less than split size, so max sure there are more planes than the split size or drop the split size.
+1. In generateAllICAO.py set minICAO and maxICAO for how many planes you wish generate. This is in hex by default.
 1. `./generateAllICAO.py`
 1. `python3 allICAO.py`
 1. `sudo bash hackRFAllICAO.sh`
 
 ## generateAllLat.py
 1. `cd ADSB-Out`
-1. In generateAllLat.py set minLat and maxLat for how many latitudes you wish generate, step is what the step size in the latitude is going to be. This will fail when the number of latitudes is less than split size, so max sure there are more planes than the split size or drop the split size.
+1. In generateAllLat.py set minLat and maxLat for how many latitudes you wish generate, step is what the step size in the latitude is going to be.
 1. `./generateAllLat.py`
 1. `python3 allLat.py`
 1. `sudo bash hackRFAllLat.sh`
