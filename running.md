@@ -126,3 +126,10 @@ These are some details on the CSV generator scripts that will generate CSV files
 1. `./generateAllLat.py`
 1. `python3 allLat.py`
 1. `sudo bash hackRFAllLat.sh`
+
+## generateAllAlt.py
+1. `cd ADSB-Out`
+1. In generateAllAlt.py set minAlt and maxAlt for how many altitudes you wish generate, step is what the step size in the altitude is going to be. There is a bug that altitudes > 50175 feet are not handled.
+1. `./generateAllAlt.py`
+1. `python3 allAlt.py`
+1. `sudo bash hackRFAllAlt.sh`
