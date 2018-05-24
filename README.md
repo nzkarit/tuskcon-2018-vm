@@ -7,4 +7,6 @@ The [running.md](https://github.com/nzkarit/tuskcon-2018-vm/blob/master/running.
 
 For Tuskcon I have put a [preconfigured VM](https://drive.google.com/file/d/1oIs01Pma_5cCD2O2yjfDhq82-Qgdy432/view?usp=sharing) up which is ready to go (basically everything from setup.md) if you would like to use that. It will disappear sometime after the con.
 
+My [slides from Tuskcon are available](https://zxsecurity.co.nz/presentations/201805_TuskCon-ZXSecurity-ADSBSDRWorkshop.pdf).
+
 If you have an RTLSDR you can do the listening parts and with a HackRF you can do the broadcast parts.
